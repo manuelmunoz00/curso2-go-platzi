@@ -1,13 +1,12 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strconv"
-	"strings"
-)
+type calc struct{}
 
+func (calc) operate(entrada string, operador string) int {
+	return 1
+}
+
+/*
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
@@ -38,3 +37,4 @@ func main() {
 	}
 
 }
+*/
