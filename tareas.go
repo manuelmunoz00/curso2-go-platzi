@@ -8,14 +8,6 @@ type task struct {
 	prioridad           int
 }
 
-type taskList struct {
-	tasks []*task
-}
-
-func (tl *taskList) agregarALista(tarea *task) {
-	tl.tasks = append(tl.tasks, tarea)
-}
-
 func (t *task) marcarCompleta() {
 	t.completado = true
 }
@@ -26,6 +18,14 @@ func (t *task) actualizarDescripcion(descripcion string) {
 
 func (t *task) actualizarNombre(nombre string) {
 	t.nombre = nombre
+}
+
+type taskList struct {
+	tasks []*task
+}
+
+func (tl *taskList) agregarALista(tarea *task) {
+	tl.tasks = append(tl.tasks, tarea)
 }
 
 func main() {
