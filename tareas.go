@@ -28,6 +28,15 @@ func (tl *taskList) agregarALista(tarea *task) {
 	tl.tasks = append(tl.tasks, tarea)
 }
 
+func (tl *taskList) imprimirListaCompletados() {
+	for _, tarea := range tl.tasks {
+		if tarea.completado {
+			fmt.Println("Nombre:", tarea.nombre)
+			fmt.Println("Descripción:", tarea.descripcion)
+		}
+	}
+}
+
 func main() {
 	tarea1 := &task{
 		nombre:      "Tomar desayuno",
@@ -43,7 +52,7 @@ func main() {
 		descripcion: "Cazuela de pollo y ensalada",
 		nombre:      "Almorzar",
 		prioridad:   1,
-		completado:  true,
+		completado:  false,
 	}
 	// fmt.Println(tarea2)
 
@@ -70,4 +79,7 @@ func main() {
 	for index, tarea := range lista.tasks {
 		fmt.Println("Index", index, "nombre", tarea.nombre)
 	}
+	lista.tasks[0].marcarCompleta()
+	fmt.Println("Listado de tareas completadas")
+	lista.imprimirListaCompletados()
 }
