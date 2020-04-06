@@ -82,4 +82,12 @@ func main() {
 	lista.tasks[0].marcarCompleta()
 	fmt.Println("Listado de tareas completadas")
 	lista.imprimirListaCompletados()
+
+	//Se agrega mapa
+	mapa := make(map[string]*taskList)
+	mapa["manuel"] = lista
+	mapa["juan"] = lista
+	fmt.Println("Lista de tareas de Manuel")
+	mapa["manuel"].imprimirListaCompletados()
+
 }
