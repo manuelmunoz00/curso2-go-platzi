@@ -12,15 +12,15 @@ type ave struct {
 }
 
 //Los structs anteriores deben implementar el metodo mover para cada uno que es requisito para la interfaz de tipo animal
-func (perro) mover() string {
+func (p perro) mover() string {
 	return "Soy un perro y estoy caminando"
 }
 
-func (pescado) mover() string {
+func (p pescado) mover() string {
 	return "Sour un pescado y estoy nadando"
 }
 
-func (ave) mover() string {
+func (p ave) mover() string {
 	return "Soy un ave y estoy volando"
 }
 
