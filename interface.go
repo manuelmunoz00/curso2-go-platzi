@@ -34,11 +34,11 @@ func moverAnimal(a animal) {
 	fmt.Println(a.mover())
 }
 
-func main() {
-	pr := perro{}
-	moverAnimal(pr)
-	pc := pescado{}
-	moverAnimal(pc)
-	av := ave{}
-	moverAnimal(av)
-}
+// func main() {
+// 	pr := perro{}
+// 	moverAnimal(pr)
+// 	pc := pescado{}
+// 	moverAnimal(pc)
+// 	av := ave{}
+// 	moverAnimal(av)
+// }
