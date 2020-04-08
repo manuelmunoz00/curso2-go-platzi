@@ -11,9 +11,11 @@ func revisarServidorC(servidor string, cnl chan string) {
 	_, err := http.Get(servidor)
 	if err != nil {
 		// fmt.Println(servidor, "se encuentra caído")
+		//escritura en canal para retornar mensaje
 		cnl <- servidor + " no se encuentra disponible"
 	} else {
 		// fmt.Println(servidor, "OK")
+		//escritura en canal para retornar mensaje
 		cnl <- servidor + " se encuentra OK"
 	}
 }
@@ -33,6 +35,7 @@ func main() {
 	}
 
 	for index := range servidores {
+		//lectura del canal
 		fmt.Println(<-cnl, index)
 	}
 
