@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"time"
 )
 
 func revisarServidor(servidor string) {
@@ -16,18 +15,18 @@ func revisarServidor(servidor string) {
 	}
 }
 
-func main() {
-	inicio := time.Now()
-	servidores := []string{
-		"https://comisariavirtual.cl",
-		"https://dgd.cerofilas.gob.cl",
-		"https://google.cl",
-		"https://instagram.com",
-	}
-	//se ignora el indice utilizando guion bajo ya que solo llamaremos la funcion con el dato del slice servidor
-	for _, servidor := range servidores {
-		revisarServidor(servidor)
-	}
-	tiempoTranscurrido := time.Since(inicio)
-	fmt.Printf("Tiempo de ejecucion %s\n", tiempoTranscurrido)
-}
+// func main() {
+// 	inicio := time.Now()
+// 	servidores := []string{
+// 		"https://comisariavirtual.cl",
+// 		"https://dgd.cerofilas.gob.cl",
+// 		"https://google.cl",
+// 		"https://instagram.com",
+// 	}
+// 	//se ignora el indice utilizando guion bajo ya que solo llamaremos la funcion con el dato del slice servidor
+// 	for _, servidor := range servidores {
+// 		revisarServidor(servidor)
+// 	}
+// 	tiempoTranscurrido := time.Since(inicio)
+// 	fmt.Printf("Tiempo de ejecucion %s\n", tiempoTranscurrido)
+// }
