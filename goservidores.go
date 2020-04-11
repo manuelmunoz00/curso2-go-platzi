@@ -33,7 +33,7 @@ func main() {
 	//ciclo de ejeución infinita
 	i := 0
 	for {
-		if i = 10{
+		if i == 10 {
 			break
 		}
 		for _, servidor := range servidores {
@@ -41,6 +41,7 @@ func main() {
 		}
 		time.Sleep(1 * time.Second)
 		fmt.Println(<-cnl)
+		i++
 	}
 
 	//se ignora el indice utilizando guion bajo ya que solo llamaremos la funcion con el dato del slice servidor
