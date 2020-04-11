@@ -29,15 +29,29 @@ func main() {
 		"https://google.cl",
 		"https://instagram.com",
 	}
-	//se ignora el indice utilizando guion bajo ya que solo llamaremos la funcion con el dato del slice servidor
-	for _, servidor := range servidores {
-		go revisarServidorC(servidor, cnl)
+
+	//ciclo de ejeución infinita
+	i := 0
+	for {
+		if i = 10{
+			break
+		}
+		for _, servidor := range servidores {
+			go revisarServidorC(servidor, cnl)
+		}
+		time.Sleep(1 * time.Second)
+		fmt.Println(<-cnl)
 	}
 
-	for index := range servidores {
-		//lectura del canal
-		fmt.Println(<-cnl, index)
-	}
+	//se ignora el indice utilizando guion bajo ya que solo llamaremos la funcion con el dato del slice servidor
+	// for _, servidor := range servidores {
+	// 	go revisarServidorC(servidor, cnl)
+	// }
+
+	// for index := range servidores {
+	// 	//lectura del canal
+	// 	fmt.Println(<-cnl, index)
+	// }
 
 	tiempoTranscurrido := time.Since(inicio)
 	fmt.Printf("Tiempo de ejecucion %s\n", tiempoTranscurrido)
